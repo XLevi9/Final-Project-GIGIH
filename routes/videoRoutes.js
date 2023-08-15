@@ -3,6 +3,6 @@ const videoController = require('../controllers/videoController');
 const router = express.Router();
 
 router.get('/', videoController.getAllVideos);
-router.get('/:id', videoController.getVideo);
+router.get('/:id', videoController.getVideoById);
 
 module.exports = router;
