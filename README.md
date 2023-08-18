@@ -1,11 +1,11 @@
 # Final-Project-GIGIH
 
 ## GitHub Public Repo URL
-[GitHub Back-end Update Repo](https://github.com/XLevi9/Final-Project-GIGIH/tree/back-end)
+[GitHub Back-end Update Repo](https://github.com/XLevi9/Final-Project-GIGIH/tree/back-end) <br>
 [Github Front-end Update Repo](https://github.com/XLevi9/Final-Project-GIGIH/tree/front-end)
 
 ## Domain
-[back-end](https://server-side-final.vercel.app/)
+[back-end](https://server-side-final.vercel.app/) <br>
 [front-end](https://final-project-tokopedia-play.vercel.app/)
 
 ## Database Structure
