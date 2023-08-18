@@ -95,13 +95,15 @@ const VideoDetail = () => {
     });
   }, [id]);
 
-  const handleCommentSubmit = (newComment) => {
-    // Menambahkan id video dalam objek newComment
-    newComment._id = id;
+  const url = window.location.href;
+  const urlParts = url.split("/");
+  const videoId = urlParts[urlParts.length - 1];
 
-    // Panggil API untuk menambahkan komentar baru
+  const handleCommentSubmit = (newComment) => {
+    const commentUrl = `http://localhost:3000/comments/${videoId}`;
+
     axios
-      .post("http://localhost:3000/comments", newComment)
+      .post(commentUrl, newComment)
       .then((response) =>
         setComments((prevComments) => [...prevComments, response.data])
       );
@@ -147,8 +149,8 @@ const VideoDetail = () => {
           height="400"
           src={video.url}
           title={video.title}
-          frameborder="0"
-          allowfullscreen
+          frameBorder="0"
+          allowFullScreen
         ></iframe>
       </div>
 
