@@ -2,7 +2,7 @@ const express = require('express');
 const commentController = require('../controllers/commentController');
 const router = express.Router();
 
-router.get('/', commentController.getComments);
-router.post('/:videoId', commentController.addComment);
+router.get('/comments', commentController.getComments);
+router.post('/comments', commentController.addComment);
 
 module.exports = router;

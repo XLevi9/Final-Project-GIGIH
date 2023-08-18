@@ -12,11 +12,6 @@ exports.getComments = async (req, res) => {
 exports.addComment = async (req, res) => {
   try {
     const { username, comment } = req.body;
-    const videoId = req.params.videoId;
-
-    if (!videoId) {
-      return res.status(400).json({ message: "Missing videoId in parameter" });
-    }
 
     const newComment = new Comment({
       username,

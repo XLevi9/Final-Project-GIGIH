@@ -26,9 +26,9 @@ mongoose.connect(process.env.MONGODB_URL, {
   useUnifiedTopology: true,
 });
 
-app.use("/videos", videoRoutes);
-app.use("/comments", commentRoutes);
-app.use("/products", productRoutes);
+app.use("/", videoRoutes);
+app.use("/", commentRoutes);
+app.use("/", productRoutes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Server is running on ${port}`));
