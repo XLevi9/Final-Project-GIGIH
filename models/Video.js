@@ -8,4 +8,4 @@ const VideoSchema = new mongoose.Schema({
     thumbnailUrl: String,
 });
 
-module.exports = mongoose.model('Video', VideoSchema);
+module.exports = mongoose.model('Video', VideoSchema, "videos");

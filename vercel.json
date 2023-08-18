@@ -2,11 +2,23 @@
   "version": 2,
   "builds": [
     {
-      "src": "./app.js",
+      "src": "./index.js",
       "use": "@vercel/node"
     }
   ],
   "routes": [
+    {
+      "src": "/videos/(.*)",
+      "dest": "/videos"
+    },
+    {
+      "src": "/comments/(.*)",
+      "dest": "/comments"
+    },
+    {
+      "src": "/products/(.*)",
+      "dest": "/products"
+    },
     {
       "src": "/(.*)",
       "dest": "/"

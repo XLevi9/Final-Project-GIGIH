@@ -2,12 +2,12 @@
   "name": "gigih_midterm",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "engines": {
-    "node": "16.x"
+    "node": "18.x"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node index.js",
     "build": "npm i"
   },
   "keywords": [],
