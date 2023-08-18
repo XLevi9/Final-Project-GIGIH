@@ -138,6 +138,6 @@ To run the API locally on your machine, follow these steps:
 - The web app should now be running on 'http://localhost:3001'
 ### Please ensure that you have Node.js and npm installed on your machine before running the API locally.
 
-#### You can access code from master branch
+#### You can access code from back-end branch and front-end branch
 If you encounter any issues while running the API, feel free to contact me at 
 oky.b20@mhs.unsyiah.ac.id
