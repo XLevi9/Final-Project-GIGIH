@@ -1,16 +1,21 @@
 # Final-Project-GIGIH
 
 ## GitHub Public Repo URL
-[GitHub Public Repo](https://github.com/XLevi9/Mid-Term_GIGIH)
+[GitHub Back-end Update Repo](https://github.com/XLevi9/Final-Project-GIGIH/tree/back-end)
+[Github Front-end Update Repo](https://github.com/XLevi9/Final-Project-GIGIH/tree/front-end)
+
+## Domain
+[back-end](https://server-side-final.vercel.app/)
+[front-end](https://final-project-tokopedia-play.vercel.app/)
 
 ## Database Structure
                     +-------------------+
                     |      Comment      |
                     +-------------------+
                     | _id               |
-                    | name              |
+                    | username          |
                     | comment           |
-                    | videoId ----------|---------+
+                    | timestamp         |---------+
                     +-------------------+         |
                                                   |
                                                   |
@@ -19,10 +24,11 @@
              |      Product      |          |       Video       |
              +-------------------+          +-------------------+
              | _id               |          | _id               |
-             | link              |          | title             |
-             | title             |          | url               |
-             | price             |          | thumbnail         |
-             | videoId ----------|          | products    ------|----|-+
+             | id                |          | id                |
+             | productUrl        |          | url               |
+             | title             |          | title             |
+             | price             |          | accountName       |
+             | videoId ----------|----------| thumbnailUrl      |----|-+
              +-------------------+          +-------------------+    |
                                                                      |
                                                                      |
@@ -32,15 +38,37 @@
                                                             |       Video       |
                                                             +-------------------+
                                                             | _id               |
-                                                            | title             |
+                                                            | id                |
                                                             | url               |
-                                                            | thumbnail         |
-                                                            | products          |
+                                                            | title             |
+                                                            | accountName       |
+                                                            | thumbnailUrl      |
                                                             +-------------------+
 
-- The "Comment" entity has attributes _id, name, comment, and videoId. The videoId is a foreign key that connects comments with a specific video in the "Video" entity.
-- The "Product" entity has attributes _id, link, title, price, and videoId. The videoId is a foreign key that connects products with a specific video in the "Video" entity.
-- The "Video" entity has attributes _id, title, url, thumbnail, and products. The products attribute is an array that contains IDs or names of products associated with a specific video in the "Product" entity.
+-> Comment
+The "Comment" table has the following attributes:
+- _id: Unique identifier for each comment.
+- username: The username of the commenter.
+- comment: The content of the comment submitted.
+- timestamp: The time when the comment was submitted.
+- videoId: Foreign key connecting comments to the related video.
+-> Product
+The "Product" table has the following attributes:
+- _id: Unique identifier for each product.
+- id: Product ID.
+- productUrl: Product URL.
+- title: Product title.
+- price: Product price.
+- videoId: Foreign key connecting products to the related video.
+-> Video
+The "Video" table has the following attributes:
+- _id: Unique identifier for each video.
+- id: Video ID.
+- url: Video URL.
+- title: Video title.
+- accountName: The account name that uploaded the video.
+- thumbnailUrl: Video thumbnail URL.
+- products: Collection of products associated with the video.
 
 
 ## API STRUCTURE 
@@ -57,10 +85,9 @@
 - Response: JSON object containing video data
 
 ### Comment API
-#### GET Comments by Video ID
-- Endpoint: '/comments/:videoId'
-- Description: Retrieve all comments related to a specific video.
-- Parameter: 'videoId' (ID of the video to view its comments).
+#### GET Comments
+- Endpoint: '/comments'
+- Description: Retrieve all comments.
 - Response: JSON array containing comment data
 
 #### POST Add Comment
@@ -76,18 +103,39 @@
 - Parameter: 'videoId' (ID of the video to view its products).
 - Response: JSON array containing product data.
 
+## FEATURES
+- Displaying a curated list of videos sourced from the backend
+- Providing the ability to view comprehensive video details upon clicking
+- Showcasing a curated list of products associated with the videos
+- Displaying user comments to foster engagement
+- Enabling comment insertion with a simple username and comment input
+Bonus: Offering the added functionality of revealing product descriptions upon clicking
+
 ## HOW TO RUN in Local
 To run the API locally on your machine, follow these steps:
 
-### Clone the repository:
-- git clone https://github.com/XLevi9/Mid-Term_GIGIH.git
-- cd Mid-Term_GIGIH
-### Install the dependencies:
+### Clone the repository back end:
+- git clone https://github.com/XLevi9/Final-Project-GIGIH/tree/back-end.git
+- cd back-end
+
+### Clone the repository front-end:
+- git clone https://github.com/XLevi9/Final-Project-GIGIH/tree/front-end.git
+- cd front-end
+
+### Install the dependencies in both of them:
 - npm install
+### Change cors origin URL (back-end)
+- from 'https://client-ui-final-projects.vercel.app' to 'http://localhost:3001'
+### Change VideoList.jsx URL (front-end)
+- from 'https://server-side-final.vercel.app/videos' to 'http://localhost:3000/videos'
+### Change VideoDetail.jsx URL (front-end)
+- all of 'https://server-side-final.vercel.app' to 'http://localhost:3000'
 ### Set up your database (if required).
 ### Start the server:
-- npm start
-- The API should now be running on 'http://localhost:5000'
+- start back end first (npm start)
+- The API should now be running on 'http://localhost:3000'
+- start front-end (npm start)
+- The web app should now be running on 'http://localhost:3001'
 ### Please ensure that you have Node.js and npm installed on your machine before running the API locally.
 
 #### You can access code from master branch
