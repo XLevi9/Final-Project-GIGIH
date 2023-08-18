@@ -25,6 +25,7 @@
 .Navbar-Link {
   color: white;
   text-decoration: none;
+  white-space: nowrap;
   padding: 6px 15px;
   border-radius: 15px;
   transition: background-color 0.3s ease;
@@ -262,6 +263,7 @@
   position: relative;
   margin: 0 auto;
   margin-top: 100px;
+  margin-left: 338px;
 }
 
 .DetailProduct-RelatedProducts {
@@ -274,7 +276,7 @@
 
 .RelatedProduct-Detail {
   width: 100%;
-  padding: 59px;
+  padding: 57px;
   margin-top: 15px;
   background-color: rgb(14, 13, 20);
 }
@@ -309,11 +311,12 @@
 /* Gaya untuk komentar di bawah video */
 .DetailProduct-CommentSection {
   position: absolute;
+  margin-top: 13px;
   top: 0;
   right: 0;
   padding: 20px;
   background-color: #0c1116;
-  height: 93vh;
+  height: 91vh;
   width: 46vh;
 }
 
@@ -434,4 +437,133 @@
   color: white;
   background-color: #06294e;
   border-radius: 10px;
+}
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1336px) {
+  html {
+    font-size: 75%;
+  }
+  .Container-Nav {
+    overflow-x: auto;
+  }
+  .Navbar-Link {
+    white-space: nowrap;
+  }
+  .Navbar-Search {
+    margin-left: 280px;
+  }
+  .DetailProduct-VideoContainer {
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    margin-top: 300px;
+    margin-left: 320px;
+  }
+  .DetailProduct-RelatedProducts {
+    display: flex;
+  }
+  .RelatedProduct-Detail {
+    height: 21vh;
+  }
+  .DetailProduct-CommentSection {
+    height: 94vh;
+    width: 25.6vh;
+    margin-top: 13px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  .Container-Nav {
+    overflow-x: auto;
+  }
+  .Navbar-Link {
+    white-space: nowrap;
+  }
+  .Navbar-Search {
+    font-size: 5px;
+  }
+  .Container-VideoList {
+    justify-content: flex-start; /* Menata dalam satu baris */
+  }
+
+  .Video-Row {
+    flex-wrap: wrap; /* Pecah menjadi tiga per baris */
+  }
+
+  .Container-Video {
+    min-width: calc((100% - 60px) / 3); /* Lebar sepertiga saat di tablet */
+    max-width: calc((100% - 60px) / 3);
+  }
+  .DetailProduct-VideoContainer {
+    margin-top: 10px;
+    margin-left: 50px;
+  }
+  .DetailProduct-RelatedProducts {
+    display: flex;
+    top: 410px;
+  }
+  .RelatedProduct-Detail {
+    height: 10vh;
+    margin-top: 13px;
+  }
+  .DetailProduct-CommentSection {
+    height: 75vh;
+    width: 55.6vh;
+    top: 410px;
+  }
+}
+
+/* Handphone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+  .Container-Nav {
+    overflow-x: auto;
+  }
+  .Navbar-Link {
+    white-space: nowrap;
+  }
+  .Navbar-Search {
+    font-size: 1px;
+  }
+  .Container-VideoList {
+    justify-content: flex-start; /* Menata dalam satu baris */
+  }
+
+  .Video-Row {
+    flex-wrap: wrap; /* Pecah menjadi dua per baris */
+  }
+
+  .Container-Video {
+    min-width: calc((100% - 20px) / 2); /* Lebar setengah saat di tablet */
+    max-width: calc((100% - 20px) / 2);
+  }
+  .DetailProduct-VideoContainer {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  .DetailProduct-IframeEdit {
+    height: 250px;
+    width: 410px;
+  }
+  .DetailProduct-RelatedProducts {
+    display: flex;
+    top: 250px;
+  }
+  .RelatedProduct-Detail {
+    height: 5vh;
+    margin-top: 13px;
+  }
+  .DetailProduct-CommentSection {
+    height: 75.6vh;
+    width: 15.6vh;
+    top: 250px;
+  }
 }

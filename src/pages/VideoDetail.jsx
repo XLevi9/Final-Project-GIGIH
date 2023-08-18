@@ -141,6 +141,7 @@ const VideoDetail = () => {
 
       <div className="DetailProduct-VideoContainer">
         <iframe
+          className="DetailProduct-IframeEdit"
           width="680"
           height="400"
           src={video.url}
