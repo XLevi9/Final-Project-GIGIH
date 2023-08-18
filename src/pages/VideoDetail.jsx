@@ -95,12 +95,8 @@ const VideoDetail = () => {
     });
   }, [id]);
 
-  const url = window.location.href;
-  const urlParts = url.split("/");
-  const videoId = urlParts[urlParts.length - 1];
-
   const handleCommentSubmit = (newComment) => {
-    const commentUrl = `http://localhost:3000/comments/${videoId}`;
+    const commentUrl = "http://localhost:3000/comments";
 
     axios
       .post(commentUrl, newComment)
