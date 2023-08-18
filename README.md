@@ -1,7 +1,7 @@
 # Final-Project-GIGIH
 
 ## GitHub Public Repo URL
-[https://github.com/XLevi9/Mid-Term_GIGIH]Link Repo
+[GitHub Public Repo](https://github.com/XLevi9/Mid-Term_GIGIH)
 
 ## Database Structure
                     +-------------------+
