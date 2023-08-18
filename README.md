@@ -46,22 +46,22 @@
                                                             +-------------------+
 
 -> Comment
-The "Comment" table has the following attributes:
+The "Comment" table has the following attributes: <br>
 - _id: Unique identifier for each comment.
 - username: The username of the commenter.
 - comment: The content of the comment submitted.
 - timestamp: The time when the comment was submitted.
-- videoId: Foreign key connecting comments to the related video.
+- videoId: Foreign key connecting comments to the related video. <br>
 -> Product
-The "Product" table has the following attributes:
+The "Product" table has the following attributes: <br>
 - _id: Unique identifier for each product.
 - id: Product ID.
 - productUrl: Product URL.
 - title: Product title.
 - price: Product price.
-- videoId: Foreign key connecting products to the related video.
+- videoId: Foreign key connecting products to the related video. <br>
 -> Video
-The "Video" table has the following attributes:
+The "Video" table has the following attributes: <br>
 - _id: Unique identifier for each video.
 - id: Video ID.
 - url: Video URL.
