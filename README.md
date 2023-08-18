@@ -67,7 +67,6 @@ The "Video" table has the following attributes: <br>
 - title: Video title.
 - accountName: The account name that uploaded the video.
 - thumbnailUrl: Video thumbnail URL.
-- products: Collection of products associated with the video.
 
 
 ## API STRUCTURE 
