@@ -10,7 +10,7 @@ require("dotenv").config();
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:3001", // Ganti ini sesuai dengan URL aplikasi frontend Anda
+  origin: "https://client-ui-final-projects.vercel.app", // Ganti ini sesuai dengan URL aplikasi frontend Anda
   methods: ["GET", "POST"],
   allowedHeaders: ["Content-Type"],
   credentials: true,
