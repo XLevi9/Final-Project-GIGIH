@@ -128,7 +128,8 @@ To run the API locally on your machine, follow these steps:
 - from 'https://server-side-final.vercel.app/videos' to 'http://localhost:3000/videos'
 ### Change VideoDetail.jsx URL (front-end)
 - all of 'https://server-side-final.vercel.app' to 'http://localhost:3000'
-### Set up your database (if required).
+### You can take data.js to your database
+### Set up your database (if required)
 ### Start the server:
 - start back end first (npm start)
 - The API should now be running on 'http://localhost:3000'
