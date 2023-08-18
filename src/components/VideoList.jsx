@@ -5,7 +5,7 @@ const VideoList = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/videos")
+    fetch("https://server-side-final.vercel.app/videos")
       .then((res) => res.json())
       .then((data) => {
         const groupedVideos = [];

@@ -84,19 +84,19 @@ const VideoDetail = () => {
   const [showComments, setShowComments] = useState(false);
 
   useEffect(() => {
-    axios.get(`http://localhost:3000/videos/${id}`).then((response) => {
+    axios.get(`https://server-side-final.vercel.app/videos/${id}`).then((response) => {
       setVideo(response.data);
-      axios.get(`http://localhost:3000/products/${id}`).then((response) => {
+      axios.get(`https://server-side-final.vercel.app/products/${id}`).then((response) => {
         setProducts(response.data);
       });
-      axios.get("http://localhost:3000/comments").then((response) => {
+      axios.get("https://server-side-final.vercel.app/comments").then((response) => {
         setComments(response.data);
       });
     });
   }, [id]);
 
   const handleCommentSubmit = (newComment) => {
-    const commentUrl = "http://localhost:3000/comments";
+    const commentUrl = "https://server-side-final.vercel.app/comments";
 
     axios
       .post(commentUrl, newComment)
